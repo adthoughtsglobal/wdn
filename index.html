@@ -19,7 +19,9 @@
 
 <body>
     <h1>The Web Desktop Newsletter</h1>
-    <center><span id="date"></span> | <a href="https://web.archive.org/web/*/https://adthoughtsglobal.github.io/wdn/">Archive</a> | <a href="https://discord.gg/drPWBDpjES">Discord</a> | <span>We do not endorse any projects.</span></center>
+    <center><span id="date"></span> | <a
+            href="https://web.archive.org/web/*/https://adthoughtsglobal.github.io/wdn/">Archive</a> | <a
+            href="https://discord.gg/drPWBDpjES">Discord</a> | <span>We do not endorse any projects.</span></center>
     <div id="newspaper"></div>
 
     <style>
@@ -83,7 +85,8 @@
 
         .article h2 {
             margin: 0 0 10px;
-            font-size: 1.5em;
+            font-size: 30px;
+            margin-top: 0;
         }
 
         .article p {
@@ -108,6 +111,21 @@
             padding: 3px;
             border-radius: 5px;
         }
+
+        .postHeader {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+        }
+
+        p.heading {
+            opacity: 0.8;
+        }
+
+        img.postHeaderImg {
+    aspect-ratio: 1 / 1;
+    height: 80px;
+}
     </style>
 
     <script>
@@ -165,9 +183,9 @@
         `;
                 const headernews = document.createElement('div');
                 headernews.classList.add("headernews");
-                headernews.innerHTML = `
-            <h2>${addLinks(data.featured.title, links)}</h2>
-            <p class="heading">${addLinks(data.featured.heading, links)}</p>
+                headernews.innerHTML = `<div>
+            <div><h2>${addLinks(data.featured.title, links)}</h2>
+            <p class="heading">${addLinks(data.featured.heading, links)}</p></div></div>
             <p class="description">${addLinks(data.featured.description, links)}</p>
         `;
                 header.appendChild(headerImage);
@@ -181,13 +199,34 @@
                     const div = document.createElement('div');
                     div.classList.add('article');
 
+                    const postHeader = document.createElement('div');
+                    postHeader.classList.add('postHeader');
+
+                    let postHeaderImg = document.createElement('img');
+                    postHeaderImg.classList.add('postHeaderImg');
+
+                    if (article?.img) {
+                        postHeaderImg.src = article.img;
+                    } else {
+                        postHeaderImg = null
+                    }
+
+
+                    const postHeaderTxt = document.createElement('h2');
+                    postHeaderTxt.classList.add('postHeaderTxt');
+
                     const title = document.createElement('h2');
                     title.innerHTML = addLinks(article.title, links);
-                    div.appendChild(title);
-
+                    postHeaderTxt.appendChild(title);
+                    if (article?.img) {
+                        postHeader.appendChild(postHeaderImg);
+                    }
+                    postHeader.appendChild(postHeaderTxt);
                     const heading = document.createElement('p');
                     heading.classList.add('heading');
                     heading.innerHTML = addLinks(article.heading, links);
+
+                    div.appendChild(postHeader);
                     div.appendChild(heading);
 
                     const description = document.createElement('p');
