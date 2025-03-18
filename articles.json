@@ -1,0 +1,26 @@
+{
+    "image": "image.png",
+    "imageDescription": "RoturTW Cover",
+    "featured": {
+        "title": "The thing is rotur:",
+        "heading": "rotur.dev",
+        "description": "Rotur is intended mostly for Turbowarp operating systems The standard should allow for things like crossplay of games between operating systems, or collaborative editing on text editors, running on completely different projects! We think this could be really really cool if its implemented at a wide scale, and it is currently Present in 5 Systems (2 Released)"
+    },
+    "articles": [
+        {
+            "title": "What? Who? Why?",
+            "heading": "rotur.dev",
+            "description": "Rotur is intended mostly for Turbowarp operating systems The standard should allow for things like crossplay of games between operating systems, or collaborative editing on text editors, running on completely different projects! We think this could be really really cool if its implemented at a wide scale, and it is currently Present in 5 Systems (2 Released)"
+        },
+        {
+            "title": "Rotur Back Up!",
+            "heading": "mistium",
+            "description": "rotur is back up! it was offline for a bit cos i was out and someone unplugged the server laptop so it was running on battery"
+        },
+        {
+            "title": "What if private github repo?",
+            "heading": "mistium",
+            "description": "Origin takes a github token and then that repo becomes your file system or a drive on your file system. "
+        }
+    ]
+}
