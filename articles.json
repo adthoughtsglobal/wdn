@@ -2,15 +2,15 @@
     "image": "image.png",
     "imageDescription": "RoturTW Cover",
     "featured": {
-        "title": "The thing is rotur:",
+        "title": "They're multiplying",
         "heading": "rotur.dev",
-        "description": "Rotur is intended mostly for Turbowarp operating systems The standard should allow for things like crossplay of games between operating systems, or collaborative editing on text editors, running on completely different projects! We think this could be really really cool if its implemented at a wide scale, and it is currently Present in 5 Systems (2 Released)"
+        "description": "Rotur said: [Rotur] is intended mostly for [Turbowarp] operating systems The standard should allow for things like crossplay of games between operating systems, or collaborative editing on text editors, running on completely different projects! We think this could be really really cool if its implemented at a wide scale, and it is currently Present in 5 Systems (2 Released)"
     },
     "articles": [
         {
-            "title": "The first article",
+            "title": "Web desktops: status report",
             "heading": "WDN",
-            "description": "Become a part by heading to "
+            "description": "Looking into the modern landscape of web desktops, we can always see brand new projects and projects that are fading away from us. Talking about individual projects, [puter], celebrated their 'first birthday of being open source'. [Sava OS] is on the brink on releasing their next major update while [originOS] recently had the 'largest updates to osl'. Zeon's [Pluto] may be making a comeback with 'Pluto 2': the newest ondev version of pluto. Lastly, [NovaOS] announced their on development version, 'NovaOS 2.5': which would be 'an even better' version of Nova. But, raven's [WebDesk] has announced have fewer updates after they 'release the next version'. [ProzillaOS] have not had any major updates since october of last year."
         },
         {
             "title": "The first article",

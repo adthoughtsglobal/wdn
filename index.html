@@ -19,7 +19,7 @@
 
 <body>
     <h1>The Web Desktop Newsletter</h1>
-    <center><span id="date"></span> | <span>Archive</span></center>
+    <center><span id="date"></span> | <span>Archive</span> | <span>We do not endorse any projects.</span></center>
     <div id="newspaper"></div>
 
     <style>
@@ -73,11 +73,12 @@
             justify-content: center;
         }
 
-
         .article {
             background-color: rgb(42, 42, 42);
             padding: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
         }
 
         .article h2 {
@@ -90,34 +91,85 @@
             color: #e2e2e2;
         }
 
+        .article p {
+            margin: 5px 0;
+            color: #e2e2e2;
+        }
+
         h1 {
             font-family: "New Rocker", system-ui;
             text-align: center;
         }
+
+        a {
+            background-color: #314a66;
+            color: rgb(129, 219, 255);
+            display: inline-block;
+            padding: 3px;
+            border-radius: 5px;
+        }
     </style>
 
     <script>
+        async function loadLinks() {
+            const response = await fetch('links.json');
+            return response.json();
+        }
+
+        function addLinks(text, links) {
+            return text.replace(/\[(.*?)\]/g, (match, name) => {
+                const key = name.toLowerCase();
+                let bestMatch = null;
+                let highestSimilarity = 0;
+
+                for (const linkKey in links) {
+                    const similarity = getSimilarity(key, linkKey);
+                    if (similarity > highestSimilarity) {
+                        highestSimilarity = similarity;
+                        bestMatch = linkKey;
+                    }
+                }
+
+                if (bestMatch) {
+                    return `<a href="${links[bestMatch]}" target="_blank">${name}</a>`;
+                }
+
+                return match;
+            });
+        }
+
+        function getSimilarity(str1, str2) {
+            const length = Math.max(str1.length, str2.length);
+            let matches = 0;
+
+            for (let i = 0; i < Math.min(str1.length, str2.length); i++) {
+                if (str1[i] === str2[i]) matches++;
+            }
+
+            return matches / length;
+        }
+
         fetch('articles.json')
             .then(response => response.json())
-            .then(data => {
+            .then(async data => {
+                const links = await loadLinks();
                 const newspaper = document.getElementById('newspaper');
 
-
                 const header = document.createElement('div');
-                header.classList.add("header")
+                header.classList.add("header");
                 const headerImage = document.createElement('div');
-                headerImage.classList.add("header-image-cont")
+                headerImage.classList.add("header-image-cont");
                 headerImage.innerHTML = `
             <img class="header-image" src="${data.image}" alt="${data.imageDescription}">
             <p class="image-description">${data.imageDescription}</p>
         `;
                 const headernews = document.createElement('div');
-                headernews.classList.add("headernews")
+                headernews.classList.add("headernews");
                 headernews.innerHTML = `
-                <h2>${data.featured.title}</h2>
-                <p class="heading">${data.featured.heading}</p>
-                <p class="description">${data.featured.description}</p>
-            `;
+            <h2>${addLinks(data.featured.title, links)}</h2>
+            <p class="heading">${addLinks(data.featured.heading, links)}</p>
+            <p class="description">${addLinks(data.featured.description, links)}</p>
+        `;
                 header.appendChild(headerImage);
                 header.appendChild(headernews);
                 newspaper.appendChild(header);
@@ -128,11 +180,21 @@
                 data.articles.forEach(article => {
                     const div = document.createElement('div');
                     div.classList.add('article');
-                    div.innerHTML = `
-                <h2>${article.title}</h2>
-                <p class="heading">${article.heading}</p>
-                <p class="description">${article.description}</p>
-            `;
+
+                    const title = document.createElement('h2');
+                    title.innerHTML = addLinks(article.title, links);
+                    div.appendChild(title);
+
+                    const heading = document.createElement('p');
+                    heading.classList.add('heading');
+                    heading.innerHTML = addLinks(article.heading, links);
+                    div.appendChild(heading);
+
+                    const description = document.createElement('p');
+                    description.classList.add('description');
+                    description.innerHTML = addLinks(article.description, links);
+                    div.appendChild(description);
+
                     grid.appendChild(div);
                 });
 
