@@ -11,7 +11,8 @@
         {
             "title": "Web desktops: status report",
             "heading": "WDN",
-            "description": "Looking into the modern landscape of web desktops, we can always see brand new projects and projects that are fading away from us. Talking about individual projects, [puter], celebrated their 'first birthday of being open source'. [Sava OS] is on the brink on releasing their next major update while [originOS] recently had the 'largest updates to osl'. Zeon's [Pluto] may be making a comeback with 'Pluto 2': the newest ondev version of pluto. Lastly, [NovaOS] announced their on development version, 'NovaOS 2.5': which would be 'an even better' version of Nova. But, raven's [WebDesk] has announced have fewer updates after they 'release the next version'. [ArcOS] teased a new version on its homepage. [ProzillaOS] have not had any major updates since october of last year."
+            "description": "Looking into the modern landscape of web desktops, we can always see brand new projects and projects that are fading away from us. Talking about individual projects, [puter], celebrated their 'first birthday of being open source'. [Sava OS] is on the brink on releasing their next major update while [originOS] recently had the 'largest updates to osl'. Zeon's [Pluto] may be making a comeback with 'Pluto 2': the newest ondev version of pluto. Lastly, [NovaOS] announced their on development version, 'NovaOS 2.5': which would be 'an even better' version of Nova. But, raven's [WebDesk] has announced have fewer updates after they 'release the next version'. [ArcOS] teased a new version on its homepage. [ProzillaOS] have not had any major updates since october of last year.",
+            "img":"statusrep.png"
         },
         {
             "title": "They're multiplying",
