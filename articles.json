@@ -1,21 +1,23 @@
 {
     "image": "image.png",
     "imageDescription": "RoturTW Cover",
-    "featured": {
-        "title": "They're multiplying",
-        "heading": "rotur.dev",
-        "description": "Rotur said: [Rotur] is intended mostly for [Turbowarp] operating systems The standard should allow for things like crossplay of games between operating systems, or collaborative editing on text editors, running on completely different projects! We think this could be really really cool if its implemented at a wide scale, and it is currently Present in 5 Systems (2 Released)"
+    "featured": 
+    {
+        "title": "The first article",
+        "heading": "WDN",
+        "description": "Today, the WDN is starting to host the biggest coverage of newest Web desktop news. Powered by Adthoughtsglobal Core, we are trying to deliver you the best web os news - And its open source. Join us today. But rememeber that we try to keep the feed as short as possible: articles will get replaced within a short while due to the fact that its important for us to keep the feed as updated as possible."
     },
     "articles": [
         {
             "title": "Web desktops: status report",
             "heading": "WDN",
-            "description": "Looking into the modern landscape of web desktops, we can always see brand new projects and projects that are fading away from us. Talking about individual projects, [puter], celebrated their 'first birthday of being open source'. [Sava OS] is on the brink on releasing their next major update while [originOS] recently had the 'largest updates to osl'. Zeon's [Pluto] may be making a comeback with 'Pluto 2': the newest ondev version of pluto. Lastly, [NovaOS] announced their on development version, 'NovaOS 2.5': which would be 'an even better' version of Nova. But, raven's [WebDesk] has announced have fewer updates after they 'release the next version'. [ProzillaOS] have not had any major updates since october of last year."
+            "description": "Looking into the modern landscape of web desktops, we can always see brand new projects and projects that are fading away from us. Talking about individual projects, [puter], celebrated their 'first birthday of being open source'. [Sava OS] is on the brink on releasing their next major update while [originOS] recently had the 'largest updates to osl'. Zeon's [Pluto] may be making a comeback with 'Pluto 2': the newest ondev version of pluto. Lastly, [NovaOS] announced their on development version, 'NovaOS 2.5': which would be 'an even better' version of Nova. But, raven's [WebDesk] has announced have fewer updates after they 'release the next version'. [ArcOS] teased a new version on its homepage. [ProzillaOS] have not had any major updates since october of last year."
         },
         {
-            "title": "The first article",
-            "heading": "WDN",
-            "description": "Today, the WDN is starting to host the biggest coverage of newest Web desktop news. Powered by Adthoughtsglobal Core, we are trying to deliver you the best web os news - And its open source. Join us today. But rememeber that we try to keep the feed as short as possible: articles will get replaced within a short while due to the fact that its important for us to keep the feed as updated as possible."
+            "title": "They're multiplying",
+            "heading": "rotur.dev",
+            "img":"",
+            "description": "Rotur said: [Rotur] is intended mostly for [Turbowarp] operating systems The standard should allow for things like crossplay of games between operating systems, or collaborative editing on text editors, running on completely different projects! We think this could be really really cool if its implemented at a wide scale, and it is currently Present in 5 Systems (2 Released)"
         }
     ]
 }
