@@ -8,19 +8,14 @@
     },
     "articles": [
         {
-            "title": "What? Who? Why?",
-            "heading": "rotur.dev",
-            "description": "Rotur is intended mostly for Turbowarp operating systems The standard should allow for things like crossplay of games between operating systems, or collaborative editing on text editors, running on completely different projects! We think this could be really really cool if its implemented at a wide scale, and it is currently Present in 5 Systems (2 Released)"
+            "title": "The first article",
+            "heading": "WDN",
+            "description": "Become a part by heading to "
         },
         {
-            "title": "Rotur Back Up!",
-            "heading": "mistium",
-            "description": "rotur is back up! it was offline for a bit cos i was out and someone unplugged the server laptop so it was running on battery"
-        },
-        {
-            "title": "What if private github repo?",
-            "heading": "mistium",
-            "description": "Origin takes a github token and then that repo becomes your file system or a drive on your file system. "
+            "title": "The first article",
+            "heading": "WDN",
+            "description": "Today, the WDN is starting to host the biggest coverage of newest Web desktop news. Powered by Adthoughtsglobal Core, we are trying to deliver you the best web os news - And its open source. Join us today. But rememeber that we try to keep the feed as short as possible: articles will get replaced within a short while due to the fact that its important for us to keep the feed as updated as possible."
         }
     ]
 }
